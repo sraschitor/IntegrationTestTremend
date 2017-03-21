@@ -39,6 +39,6 @@ public class IntegrationTestTremend_Base {
         MainPage mp = new MainPage(driver);
 
         //Login with valid credentials
-        //mp.loginWithUsernameAndPassword(username, password);
+        mp.loginWithUsernameAndPassword(username, password);
     }
 }

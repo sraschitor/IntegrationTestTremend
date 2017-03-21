@@ -8,12 +8,12 @@ import org.testng.annotations.Test;
 public class ExampleTest_Disabled extends DriverBase {
 
     @Test
-            (groups = ("Test"), enabled=false) //Disabled test
+            (groups = ("Test"), enabled = false) //Disabled test
     public void Example_01() throws Exception {
         WebDriver driver = getDriver();
 
         IntegrationTestTremend_Base base = new IntegrationTestTremend_Base(driver);
-        base.setUp("Test short description", "TestID (Example_01", DataItems.validUsername, DataItems.validPassword);
+        base.setUp("Test short description", "TestID (Example_01)", DataItems.validUsername, DataItems.validPassword);
 
     }
 }
