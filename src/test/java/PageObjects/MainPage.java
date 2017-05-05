@@ -6,6 +6,10 @@ import org.openqa.selenium.WebElement;
 
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 public class MainPage {
 
@@ -19,19 +23,35 @@ public class MainPage {
 
     //Set locators for bellow elements
 
-    @FindBy(id = "")
+    @FindBy(id = "identifierId")
     public WebElement usernameField;
 
-    @FindBy(id = "")
+    @FindBy(name = "password")
     public WebElement passwordField;
 
-    @FindBy(id = "")
-    public WebElement loginButton;
+    @FindBy(css = "#identifierNext > content > span")
+    public WebElement nextEmailButton;
 
-    public void loginWithUsernameAndPassword(String username, String password){
+    @FindBy (css = "#passwordNext > content > span")
+    public WebElement nextPswdButton;
+
+
+    @FindBy(id = "signIn")
+    public WebElement signIn;
+
+
+    public void loginWithUsernameAndPassword(String username, String password) throws InterruptedException {
         CommonTask.setInputField(driver, usernameField, username);
+        nextEmailButton.click();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(passwordField));
         CommonTask.setInputField(driver, passwordField, password);
-        loginButton.click();
+        nextPswdButton.click();
+        Thread.sleep(1500);
+
+
+
+
     }
 
 

@@ -54,7 +54,7 @@
                 </bitrate>
             </version>
         </driver>
-		<driver id="edge">
+		<!--<driver id="edge">
                     <version id="3.14393">
                         <bitrate sixtyfourbit="true" thirtytwobit="true">
                             <filelocation>https://download.microsoft.com/download/3/2/D/32D3E464-F2EF-490F-841B-05D53C848D15/MicrosoftWebDriver.exe</filelocation>
@@ -62,7 +62,7 @@
                             <hashtype>sha1</hashtype>
                         </bitrate>
                     </version>
-        </driver>
+        </driver>-->
     </windows>
     <linux>
         <driver id="googlechrome">

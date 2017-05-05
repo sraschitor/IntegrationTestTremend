@@ -60,6 +60,11 @@ public class DriverBase extends TestListenerAdapter {
 
        //get test result
         int res = result.getStatus();
+
+        System.out.println (result);
+        System.out.println (result.getStatus());
+        System.out.println (res);
+
         switch (res) {
             case ITestResult.FAILURE:
                 System.out.println ("Test has failed");
