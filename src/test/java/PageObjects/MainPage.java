@@ -43,6 +43,7 @@ public class MainPage {
     public void loginWithUsernameAndPassword(String username, String password) throws InterruptedException {
         CommonTask.setInputField(driver, usernameField, username);
         nextEmailButton.click();
+        Thread.sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(passwordField));
         CommonTask.setInputField(driver, passwordField, password);
