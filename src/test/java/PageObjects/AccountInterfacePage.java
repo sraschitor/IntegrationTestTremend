@@ -377,14 +377,15 @@ public class AccountInterfacePage extends MainPage {
 
 
     //Create string arrays for assert
-    public String[] getAccountInterfaceDetails (){
+    public String[] getAccountInterfaceDetails () throws InterruptedException {
+        Thread.sleep(500);
         String[] details = {
-                    getUrl(),
                     getTitle(),
                     getAccountTitle(),
                     getAccUserName(),
                     getProfileButtonDetails(),
-                    getVacationsButtonDetail()
+                    getVacationsButtonDetail(),
+                    getUrl()
         };
         return details;
     }

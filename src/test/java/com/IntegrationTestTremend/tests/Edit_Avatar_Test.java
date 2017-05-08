@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 public class Edit_Avatar_Test extends DriverBase {
 
-    @Test (groups = "Tengine")
+    @Test (groups = {"Tengine"})
 
     public void EA_1() throws Exception {
 

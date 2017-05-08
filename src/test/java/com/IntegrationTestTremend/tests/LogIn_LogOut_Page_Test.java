@@ -23,7 +23,7 @@ import java.util.zip.DataFormatException;
 public class LogIn_LogOut_Page_Test extends DriverBase {
 
 
-    @Test (groups = "Tengine")
+    @Test (groups = {"Tengine"})
 
     public void LogIn_1() throws Exception {
 
@@ -49,7 +49,7 @@ public class LogIn_LogOut_Page_Test extends DriverBase {
 
     }
 
-    @Test (groups = "Tengine")
+    @Test (groups = {"Tengine"})
 
     public void logIn_Neg_2() throws Exception {
         WebDriver driver = getDriver();

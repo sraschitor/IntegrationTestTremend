@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 public class Edit_Profile_Test extends DriverBase {
 
-    @Test (groups = "Tengine")
+    @Test (groups = {"Tengine"})
 
     public void EP_1() throws Exception {
 
