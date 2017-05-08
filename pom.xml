@@ -80,7 +80,7 @@
 
     <profiles>
         <profile>
-            <id>Test</id>
+            <id>Tengine</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -146,6 +146,25 @@
                                 </goals>
                             </execution>
                         </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>Test</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <source>1.7</source>
+                            <target>1.7</target>
+                        </configuration>
+                        <version>2.3.2</version>
                     </plugin>
                 </plugins>
             </build>

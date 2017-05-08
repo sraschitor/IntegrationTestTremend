@@ -23,7 +23,7 @@ import java.util.zip.DataFormatException;
 public class LogIn_LogOut_Page_Test extends DriverBase {
 
 
-    @Test (groups = "Test")
+    @Test (groups = "Tengine")
 
     public void LogIn_1() throws Exception {
 
@@ -47,5 +47,21 @@ public class LogIn_LogOut_Page_Test extends DriverBase {
         Assert.assertEquals(driver.getCurrentUrl(), DataItems.webAppUrl, "The page reached is not the homepage of logout from WebApp");
         System.out.println("User successfully logged out of test environment web app.");
 
+    }
+
+    @Test (groups = "Tengine")
+
+    public void logIn_Neg_2() throws Exception {
+        WebDriver driver = getDriver();
+
+        //Log in test environment with invalid username
+        IntegrationTestTremend_Base base = new IntegrationTestTremend_Base(driver);
+        base.setUp("LogIn_Neg_2", "TestID (LGINN2)", DataItems.inValidUsername, DataItems.inValidPassword);
+        System.out.println("You have attempted to log in test environment with invalid username. Proceed with asserting unauthorized message...");
+
+        //Assert unauthorized message
+        LogInPage lg = new LogInPage(driver);
+        AssertJUnit.assertEquals("You have not received the unauthorized message when attempted to log in with invalid username", DataItems.invalidUsernameMessage, lg.unauthorizedMessage());
+        System.out.println("You have been successfully restricted from accessing the Test environment with an invalid username");
     }
 }

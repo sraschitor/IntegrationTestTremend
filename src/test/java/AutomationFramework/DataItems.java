@@ -8,6 +8,9 @@ public class DataItems {
     public static String targetURL = "http://integration.tengine.tremend.ro/login"; //"https://github.com/sraschitor/IntegrationTestTremend"
     public static String validUsername = "sraschitor@tremend.ro";
     public static String validPassword = "Tremend2016";
+    public static String inValidUsername = "cojoacesuport@gmail.com";
+    public static String inValidPassword = "cojocarul";
+
 
     // -------------- Waiting Time
     public static int shortWait = 10;
@@ -17,6 +20,7 @@ public class DataItems {
     public static String webAppUrl ="http://integration.tengine.tremend.ro/logout";
     public static String accountInterfaceUrl = "http://integration.tengine.tremend.ro/account";
     public static String accountInterfaceTitle = "Tengine | Account";
+    public static String invalidUsernameMessage = "Unauthorized";
 
     //Sections Titles
     public static String accUserName = "Sorin Gabriel";

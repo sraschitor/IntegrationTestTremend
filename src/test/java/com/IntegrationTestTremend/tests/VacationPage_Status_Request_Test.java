@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 
 public class VacationPage_Status_Request_Test extends DriverBase {
 
-    @Test(groups = "Test")
+    @Test(groups = "Tengine")
 
     public void VP_R_1() throws Exception {
 

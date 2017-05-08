@@ -19,7 +19,7 @@ import javax.xml.crypto.Data;
 
 public class Edit_Profile_Negative_Test extends DriverBase  {
 
-    @Test (groups = "Test")
+    @Test (groups = "Tengine")
 
     public void EP_N_1 () throws Exception {
 

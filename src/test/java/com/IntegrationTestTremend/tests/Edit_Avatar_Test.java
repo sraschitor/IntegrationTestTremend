@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 public class Edit_Avatar_Test extends DriverBase {
 
-    @Test (groups = "Test")
+    @Test (groups = "Tengine")
 
     public void EA_1() throws Exception {
 
@@ -24,6 +24,7 @@ public class Edit_Avatar_Test extends DriverBase {
         System.out.println("You have successfully logged in test environment. Proceed with testing...");
 
         //Click Profile picture in order to change it
+        System.out.println("Reach account interface and change avatar...");
         AccountInterfacePage aip = new AccountInterfacePage(driver);
         aip.clickAndChangeAvatar(); // Fails due to issue TEST-749
 
