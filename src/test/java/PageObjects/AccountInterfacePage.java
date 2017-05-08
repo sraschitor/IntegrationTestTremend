@@ -380,12 +380,13 @@ public class AccountInterfacePage extends MainPage {
     public String[] getAccountInterfaceDetails () throws InterruptedException {
         Thread.sleep(500);
         String[] details = {
+                    getUrl(),
                     getTitle(),
                     getAccountTitle(),
                     getAccUserName(),
                     getProfileButtonDetails(),
                     getVacationsButtonDetail(),
-                    getUrl()
+
         };
         return details;
     }
