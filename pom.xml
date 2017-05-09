@@ -162,8 +162,8 @@
                             </systemPropertyVariables>
                             <groups>Tengine</groups>
                             <skipTests>false</skipTests>
-                            <parallel>methods</parallel>
-                            <threadCount>3</threadCount>
+                            <parallel>methods</parallel> <!--multi thread test runs -->
+                            <threadCount>1</threadCount>
                         </configuration>
                         <dependencies>
                             <dependency>
